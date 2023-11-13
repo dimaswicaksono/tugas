@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Web Pilihan</title>
+    <style>
+        /* Style untuk desain menggunakan layout table */
+        #table-layout {
+            display: none;
+        }
+
+        /* Style untuk desain menggunakan layout frame */
+        #frame-layout {
+            display: none;
+        }
+
+        /* Style untuk desain menggunakan HTML Responsive Web Design */
+        #responsive-layout {
+            display: none;
+        }
+
+        /* Style untuk desain lainnya */
+        #other-layout {
+            display: none;
+        }
+
+        /* Style untuk formulir isian */
+        #registration-form {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Pilihan Desain menggunakan layout table -->
+    <button onclick="showLayout('table-layout')">Layout Table</button>
+
+    <!-- Pilihan Desain menggunakan layout frame -->
+    <button onclick="showLayout('frame-layout')">Layout Frame</button>
+
+    <!-- Pilihan Desain menggunakan HTML Responsive Web Design -->
+    <button onclick="showLayout('responsive-layout')">Responsive Design</button>
+
+    <!-- Pilihan Desain Lainnya -->
+    <button onclick="showLayout('other-layout')">Desain Lainnya</button>
+
+    <!-- Hyperlink untuk Registrasi -->
+    <a href="#" onclick="showForm('registration-form')">Registrasi</a>
+
+    <!-- Konten Desain menggunakan layout table -->
+    <div id="table-layout">
+        <!-- Isi desain layout table -->
+        <p>Ini adalah desain menggunakan layout table.</p>
+    </div>
+
+    <!-- Konten Desain menggunakan layout frame -->
+    <div id="frame-layout">
+        <!-- Isi desain layout frame -->
+        <p>Ini adalah desain menggunakan layout frame.</p>
+    </div>
+
+    <!-- Konten Desain menggunakan HTML Responsive Web Design -->
+    <div id="responsive-layout">
+        <!-- Isi desain responsive -->
+        <p>Ini adalah desain menggunakan HTML Responsive Web Design.</p>
+    </div>
+
+    <!-- Konten Desain Lainnya -->
+    <div id="other-layout">
+        <!-- Isi desain lainnya -->
+        <p>Ini adalah desain lainnya.</p>
+    </div>
+
+    <!-- Formulir Registrasi -->
+    <div id="registration-form">
+        <h2>Formulir Registrasi</h2>
+        <form>
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        function showLayout(layoutId) {
+            // Semua desain di-hide terlebih dahulu
+            hideAllLayouts();
+
+            // Kemudian, tampilkan desain yang dipilih
+            document.getElementById(layoutId).style.display = 'block';
+        }
+
+        function showForm(formId) {
+            // Semua formulir di-hide terlebih dahulu
+            hideAllForms();
+
+            // Kemudian, tampilkan formulir yang dipilih
+            document.getElementById(formId).style.display = 'block';
+        }
+
+        function hideAllLayouts() {
+            // Semua desain di-hide
+            document.getElementById('table-layout').style.display = 'none';
+            document.getElementById('frame-layout').style.display = 'none';
+            document.getElementById('responsive-layout').style.display = 'none';
+            document.getElementById('other-layout').style.display = 'none';
+        }
+
+        function hideAllForms() {
+            // Semua formulir di-hide
+            document.getElementById('registration-form').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
