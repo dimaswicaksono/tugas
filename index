@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Web Pilihan</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        button, a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover, a:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        #table-layout {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        #frame-layout {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        #responsive-layout {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        #other-layout {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        #registration-form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+   <a href="/test/layout-table.html">Layout-Table</a>
+   <a href="/test/layout-frame.html">Layout-Frame</a>
+   <a href="/test/responsive.html">Responsive</a>
+   <a href="/test/desain-lainnya.html">Desain-Lainnya</a>
+
+    <a href="/test/registrasi.html">Registrasi</a>
+
+    <script>
+        function showLayout(layoutId) {
+            hideAllLayouts();
+            document.getElementById(layoutId).style.display = 'block';
+        }
+
+        function showForm(formId) {
+            hideAllForms();
+            document.getElementById(formId).style.display = 'block';
+        }
+
+        function hideAllLayouts() {
+            document.getElementById('table-layout').style.display = 'none';
+            document.getElementById('frame-layout').style.display = 'none';
+            document.getElementById('responsive-layout').style.display = 'none';
+            document.getElementById('other-layout').style.display = 'none';
+        }
+
+        function hideAllForms() {
+            document.getElementById('registration-form').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
